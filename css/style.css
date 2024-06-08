@@ -1,45 +1,4 @@
-@font-face {
-  font-family: AlumniSans;
-  font-display: swap;
-  src: url("../fonts/AlumniSans-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: YesevaOne;
-  font-display: swap;
-  src: url("../fonts/YesevaOne-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=c&display=swap");
 :root {
   --background: #FFFCF9;
   --black: #020202;
@@ -331,7 +290,7 @@ body.lock {
 }
 
 h2 {
-  font-family: YesevaOne;
+  font-family: "Yeseva One";
   font-weight: 400;
   font-size: 300px;
   line-height: 90%;
@@ -358,7 +317,7 @@ h2 {
 }
 
 h3 {
-  font-family: AlumniSans;
+  font-family: "Alumni Sans";
   font-weight: 700;
   font-size: 80px;
   line-height: 106%;
@@ -386,7 +345,7 @@ h3 {
 }
 
 h4 {
-  font-family: AlumniSans;
+  font-family: "Alumni Sans";
   font-weight: 700;
   font-size: 62px;
   line-height: 100%;
@@ -542,7 +501,7 @@ h6 {
 }
 
 .numeric {
-  font-family: YesevaOne;
+  font-family: "Yeseva One";
   font-size: 600px;
   line-height: 82%;
   text-transform: uppercase;
@@ -4197,7 +4156,7 @@ h6 {
   }
 }
 .follow-me-krykum__link {
-  font-family: AlumniSans;
+  font-family: "Alumni Sans";
   font-weight: 700;
   font-size: 80px;
   line-height: 106%;
