@@ -2018,7 +2018,7 @@ h6 {
   height: 100%;
   top: 0;
   right: 0;
-  background: rgba(234, 229, 225, 0.4);
+  background: rgba(125, 30, 30, 0.8);
   backdrop-filter: blur(12.5px);
   -webkit-backdrop-filter: blur(12.5px);
   z-index: 1;
@@ -2039,11 +2039,8 @@ h6 {
 .bottom-about-krykum__text {
   position: relative;
   max-width: 819px;
-  color: rgba(2, 2, 2, 0.9);
+  color: var(--white);
   z-index: 2;
-}
-.bottom-about-krykum__text .bg::before {
-  background: var(--yellow);
 }
 @media (max-width: 1572px) {
   .bottom-about-krykum__text {
@@ -2053,6 +2050,10 @@ h6 {
 @media (max-width: 992.98px) {
   .bottom-about-krykum__text {
     order: 2;
+    color: var(--black);
+  }
+  .bottom-about-krykum__text .bg::before {
+    background: var(--yellow);
   }
 }
 .bottom-about-krykum__image-block {
@@ -2062,6 +2063,7 @@ h6 {
   width: 506px;
   top: 0;
   right: 0;
+  transform: translate(-1.5px, 0);
 }
 @media (max-width: 992.98px) {
   .bottom-about-krykum__image-block {
@@ -2069,6 +2071,7 @@ h6 {
     order: 1;
     width: 100%;
     max-width: 506px;
+    transform: translate(0px, 0);
   }
 }
 .bottom-about-krykum__image {
