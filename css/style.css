@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap");
 :root {
   --background: #FFFCF9;
@@ -730,6 +731,54 @@ h6 {
   }
 }
 
+@keyframes logoIcon {
+  0% {
+    opacity: 0.8;
+    transform: scale(3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes logoImg {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes logoBtn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@keyframes mainImg {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes header {
+  0% {
+    opacity: 0;
+    transform: translate(0, -150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
 .ibg {
   background-position: center;
   background-size: cover;
@@ -739,6 +788,11 @@ h6 {
   display: none;
 }
 
+.header {
+  animation-name: header;
+  animation-delay: 1s !important;
+  animation-duration: 4s !important;
+}
 .main-header {
   padding: 0 90px;
   display: flex;
@@ -1638,11 +1692,11 @@ h6 {
   }
 }
 .main-krykum__column_image {
-  flex: 0 0 37.821%;
+  flex: 0 0 38.233%;
 }
 @media (max-width: 1572px) {
   .main-krykum__column_image {
-    flex: 0 0 31.929%;
+    flex: 0 0 37.78%;
   }
 }
 @media (max-width: 1250px) {
@@ -1670,21 +1724,31 @@ h6 {
   }
 }
 .main-krykum__logo {
-  width: 74.537%;
+  width: 102.622%;
   transform: translate(24.5%, 0);
+  position: relative;
 }
 .main-krykum__logo:not(:last-child) {
   margin: 0 0 40px 0;
 }
 .main-krykum__logo img {
   max-width: 100%;
+  animation-name: logoImg;
+  animation-delay: 1s !important;
+  animation-duration: 4s !important;
 }
 @media (max-width: 1572px) {
   .main-krykum__logo {
-    width: 76.428%;
+    width: 99.152%;
+    transform: translate(24%, 0);
   }
   .main-krykum__logo:not(:last-child) {
     margin: 0 0 30px 0;
+  }
+}
+@media (max-width: 1250px) {
+  .main-krykum__logo {
+    width: 133.84%;
   }
 }
 @media (max-width: 992.98px) {
@@ -1709,9 +1773,25 @@ h6 {
     margin: 0 0 0px 0;
   }
 }
+.main-krykum__logo-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: auto;
+  background: var(--burgundy);
+  animation-name: logoIcon;
+  animation-delay: 1s !important;
+  animation-duration: 4s !important;
+}
 .main-krykum__btn {
   position: relative;
   z-index: 2;
+  animation-name: logoBtn;
+  animation-delay: 5s !important;
+  animation-duration: 2s !important;
 }
 @media (max-width: 992.98px) {
   .main-krykum__btn {
@@ -1722,6 +1802,9 @@ h6 {
   position: relative;
   padding: 0 0 147.968% 0;
   overflow: hidden;
+  animation-name: mainImg;
+  animation-delay: 1s !important;
+  animation-duration: 4s !important;
 }
 .main-krykum__image-block::before, .main-krykum__image-block::after {
   position: absolute;
@@ -1893,18 +1976,6 @@ h6 {
   position: relative;
   padding: 0 0 40px 0;
 }
-.bottom-about-krykum__content::before {
-  position: absolute;
-  content: "";
-  width: 200%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  background: rgba(234, 229, 225, 0.4);
-  backdrop-filter: blur(12.5px);
-  -webkit-backdrop-filter: blur(12.5px);
-  z-index: 1;
-}
 @media (max-width: 1572px) {
   .bottom-about-krykum__content {
     flex: 0 0 820px;
@@ -1916,7 +1987,28 @@ h6 {
     flex-direction: column;
     padding: 0;
   }
-  .bottom-about-krykum__content::before {
+}
+.bottom-about-krykum__content-bg {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: rgba(234, 229, 225, 0.4);
+  backdrop-filter: blur(12.5px);
+  -webkit-backdrop-filter: blur(12.5px);
+  z-index: 1;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -ms-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.bottom-about-krykum__content-bg.lock {
+  transform: translate(-506px, 0) !important;
+}
+@media (max-width: 992.98px) {
+  .bottom-about-krykum__content-bg {
     display: none;
   }
 }
@@ -1924,7 +2016,7 @@ h6 {
   position: relative;
   max-width: 819px;
   color: rgba(2, 2, 2, 0.9);
-  z-index: 1;
+  z-index: 2;
 }
 .bottom-about-krykum__text .bg::before {
   background: var(--yellow);
@@ -1965,6 +2057,7 @@ h6 {
 .bottom-about-krykum__quote {
   height: 715px;
   padding: 17px 0 0 4px;
+  overflow: hidden;
 }
 .bottom-about-krykum__quote img {
   height: 100%;
@@ -1989,6 +2082,22 @@ h6 {
 @media (max-width: 480.98px) {
   .bottom-about-krykum__quote {
     height: 558px;
+  }
+}
+.bottom-about-krykum__quote-img {
+  transform: translate(100%, 0);
+  -webkit-transition: all 1s ease 0.5s;
+  -moz-transition: all 1s ease 0.5s;
+  -ms-transition: all 1s ease 0.5s;
+  -o-transition: all 1s ease 0.5s;
+  transition: all 1s ease 0.5s;
+}
+.bottom-about-krykum__quote-img.active {
+  transform: translate(0, 0);
+}
+@media (max-width: 992.98px) {
+  .bottom-about-krykum__quote-img {
+    transform: translate(0, 0);
   }
 }
 
@@ -2584,6 +2693,276 @@ h6 {
 
 .top-map-krykum__title {
   color: var(--burgundy);
+}
+
+.map {
+  position: relative;
+}
+.map__point {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  overflow: auto;
+  background: var(--burgundy);
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+  z-index: 2;
+}
+.map__point::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 140px;
+  background: url("../img/point.svg") center no-repeat;
+  background-size: contain;
+  top: 0;
+  transform: translate(0, -100%);
+  display: flex;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+@media (max-width: 1572px) {
+  .map__point::before {
+    width: 78px;
+    height: 110px;
+  }
+}
+.map__point::after {
+  position: absolute;
+  width: 100px;
+  height: 140px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.5px;
+  text-align: center;
+  color: #000000;
+  top: 0;
+  transform: translate(0, -100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 12px 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+@media (max-width: 1572px) {
+  .map__point::after {
+    font-size: 14px;
+    line-height: 17.07px;
+    padding: 0;
+  }
+}
+.map__point:hover::before, .map__point:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 1750px) {
+  .map__point {
+    width: 17.5px;
+    height: 17.5px;
+  }
+}
+@media (max-width: 1572px) {
+  .map__point {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .map__point {
+    width: 12.5px;
+    height: 12.5px;
+  }
+}
+@media (max-width: 992.98px) {
+  .map__point {
+    width: 10px;
+    height: 10px;
+  }
+}
+@media (max-width: 768.98px) {
+  .map__point {
+    width: 8px;
+    height: 8px;
+  }
+}
+@media (max-width: 480.98px) {
+  .map__point {
+    width: 5.75px;
+    height: 5.75px;
+  }
+}
+@media (max-width: 400px) {
+  .map__point {
+    width: 4px;
+    height: 4px;
+  }
+}
+.map__point_1 {
+  left: 61.1%;
+  top: 49.5%;
+}
+.map__point_1::after {
+  content: "ОАЕ";
+}
+.map__point_2 {
+  left: 15%;
+  top: 26%;
+}
+.map__point_2::after {
+  content: "Канада";
+}
+.map__point_3 {
+  left: 17.5%;
+  top: 39%;
+}
+.map__point_3::after {
+  content: "США";
+}
+.map__point_4 {
+  left: 51.2%;
+  top: 19.9%;
+}
+.map__point_4::after {
+  content: "Швеція";
+}
+.map__point_5 {
+  left: 45.4%;
+  top: 40%;
+}
+.map__point_5::after {
+  content: "Іспанія";
+}
+.map__point_6 {
+  left: 49.4%;
+  top: 31.2%;
+}
+.map__point_6::after {
+  content: "Німеччина ";
+  font-size: 14px;
+  line-height: 17.07px;
+}
+@media (max-width: 1572px) {
+  .map__point_6::after {
+    font-size: 12px;
+    line-height: 14.63px;
+  }
+}
+.map__point_7 {
+  left: 46.7%;
+  top: 46.8%;
+}
+.map__point_7::after {
+  content: "Алжир";
+}
+.map__point_8 {
+  left: 51.8%;
+  top: 31.2%;
+}
+.map__point_8::after {
+  content: "Польща";
+}
+.map__point_9 {
+  left: 48.8%;
+  top: 53.3%;
+}
+.map__point_9::after {
+  content: "Нігерія";
+}
+.map__point_10 {
+  left: 52.7%;
+  top: 35.9%;
+}
+.map__point_10::after {
+  content: "Румунія";
+}
+.map__point_11 {
+  left: 55.2%;
+  top: 32.5%;
+}
+.map__point_11::after {
+  content: "Україна";
+}
+.map__point_12 {
+  left: 54%;
+  top: 34.8%;
+}
+.map__point_12::after {
+  content: "Молдова";
+}
+.map__point_13 {
+  left: 52.65%;
+  top: 40.2%;
+}
+.map__point_13::after {
+  content: "Греція";
+}
+.map__point_14 {
+  left: 54.5%;
+  top: 48%;
+}
+.map__point_14::after {
+  content: "Єгипет";
+}
+.map__point_15 {
+  left: 53.3%;
+  top: 81.3%;
+}
+.map__point_15::after {
+  content: "ПАР";
+}
+.map__point_16 {
+  left: 65.55%;
+  top: 33.55%;
+}
+.map__point_16::after {
+  content: "Казахстан";
+}
+.map__point_17 {
+  left: 65.4%;
+  top: 46.7%;
+}
+.map__point_17::after {
+  content: "Пакистан";
+  font-size: 14px;
+  line-height: 17.07px;
+}
+@media (max-width: 1572px) {
+  .map__point_17::after {
+    font-size: 12px;
+    line-height: 14.63px;
+  }
+}
+.map__point_18 {
+  left: 83.4%;
+  top: 77.2%;
+}
+.map__point_18::after {
+  content: "Австралія";
+  font-size: 14px;
+  line-height: 17.07px;
+}
+@media (max-width: 1572px) {
+  .map__point_18::after {
+    font-size: 12px;
+    line-height: 14.63px;
+  }
 }
 
 .partners-krykum__body {
@@ -3308,6 +3687,33 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  position: relative;
+}
+.item-services-krykum::before {
+  position: absolute;
+  content: "";
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--burgundy);
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 1572px) {
+  .item-services-krykum::before {
+    width: 60px;
+    height: 60px;
+  }
 }
 @media (max-width: 1650px) {
   .item-services-krykum {
@@ -3322,6 +3728,12 @@ h6 {
 @media (max-width: 435px) {
   .item-services-krykum {
     padding: 30px 20px;
+  }
+}
+@media (min-width: 992.98px) {
+  .item-services-krykum:hover::before {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .item-services-krykum_burgundy {
