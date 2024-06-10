@@ -1786,6 +1786,30 @@ h6 {
   animation-delay: 1s !important;
   animation-duration: 4s !important;
 }
+@media (max-width: 1572px) {
+  .main-krykum__logo-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+@media (max-width: 992.98px) {
+  .main-krykum__logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 768.98px) {
+  .main-krykum__logo-icon {
+    width: 32.5px;
+    height: 32.5px;
+  }
+}
+@media (max-width: 480.98px) {
+  .main-krykum__logo-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
 .main-krykum__btn {
   position: relative;
   z-index: 2;
