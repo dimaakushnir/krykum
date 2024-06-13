@@ -344,6 +344,11 @@ h3 {
     font-size: 44px;
   }
 }
+@media (max-width: 450px) {
+  h3 {
+    font-size: 41px;
+  }
+}
 
 h4 {
   font-family: "Alumni Sans", Arial, sans-serif;
@@ -369,6 +374,11 @@ h4 {
 @media (max-width: 480.98px) {
   h4 {
     font-size: 38px;
+  }
+}
+@media (max-width: 450px) {
+  h4 {
+    font-size: 37px;
   }
 }
 
@@ -457,6 +467,11 @@ h6 {
   }
   .text-1:not(:last-child) {
     margin: 0 0 10px 0;
+  }
+}
+@media (max-width: 450px) {
+  .text-1 {
+    font-size: 21px;
   }
 }
 
@@ -1765,8 +1780,8 @@ h6 {
     top: 75px;
     right: -15px;
     background: rgba(255, 252, 249, 0.8);
-    filter: blur(200px);
-    -webkit-filter: blur(200px);
+    filter: blur(115px);
+    -webkit-filter: blur(115px);
     z-index: -1;
   }
   .main-krykum__logo:not(:last-child) {
@@ -1945,6 +1960,11 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+@media (max-width: 992.98px) {
+  .content-top-about-krykum__body {
+    padding: 0 20px 0 0;
+  }
 }
 .content-top-about-krykum__title {
   max-width: 875px;
