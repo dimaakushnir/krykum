@@ -316,6 +316,11 @@ h2 {
     font-size: 105px;
   }
 }
+@media (max-width: 450px) {
+  h2 {
+    font-size: 100px;
+  }
+}
 
 h3 {
   font-family: "Alumni Sans", Arial, sans-serif;
@@ -349,6 +354,11 @@ h3 {
     font-size: 41px;
   }
 }
+@media (max-width: 415px) {
+  h3 {
+    font-size: 38px;
+  }
+}
 
 h4 {
   font-family: "Alumni Sans", Arial, sans-serif;
@@ -379,6 +389,11 @@ h4 {
 @media (max-width: 450px) {
   h4 {
     font-size: 37px;
+  }
+}
+@media (max-width: 415px) {
+  h4 {
+    font-size: 34px;
   }
 }
 
@@ -472,6 +487,11 @@ h6 {
 @media (max-width: 450px) {
   .text-1 {
     font-size: 21px;
+  }
+}
+@media (max-width: 415px) {
+  .text-1 {
+    font-size: 20px;
   }
 }
 
@@ -1936,6 +1956,11 @@ h6 {
     padding: 141px 0 0 0;
   }
 }
+@media (max-width: 450px) {
+  .top-about-krykum {
+    padding: 136px 0 0 0;
+  }
+}
 .top-about-krykum__title {
   position: absolute;
   top: 0;
@@ -2511,6 +2536,11 @@ h6 {
 @media (max-width: 1350px) and (max-width: 480.98px) {
   .certificates-krykum__title span {
     transform: rotate(-90deg) translate(-30px, 55px);
+  }
+}
+@media (max-width: 450px) {
+  .certificates-krykum__title {
+    font-size: 105px;
   }
 }
 .certificates-krykum__image-block {
